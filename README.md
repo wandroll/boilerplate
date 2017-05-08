@@ -4,13 +4,11 @@
   </a>
 </p>
 
-<p align="center">Vue Material Boilerplate</p>
+<p align="center">The official Vue Material boilerplate (WIP)</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/STATUS-WIP-orange.svg" alt="Status: WIP">
 </p>
-
-<p align="center">The official Vue Material boilerplate (WIP)</p>
 
 ## Progress
 - [X] Webpack 2
