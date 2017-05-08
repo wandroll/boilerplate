@@ -30,6 +30,8 @@
 - [X] Code Coverage
 - [X] Offline Support
 - [X] Pre Rendered HTML routes
+- [ ] Vue Material
+- [ ] Starter Template
 - [ ] Server-Side Rendering (In Progress)
 
 ## Installation
