@@ -1,10 +1,9 @@
 <h2 align="center">Vue Material Boilerplate</h2>
+<p>The official Vue Material boilerplate (WIP)</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/STATUS-WIP-orange.svg" alt="Status: WIP">
 </p>
-
-> The official Vue Material boilerplate (WIP)
 
 ## Progress
 - [X] Webpack 2
