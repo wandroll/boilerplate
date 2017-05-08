@@ -1,7 +1,7 @@
 {
   "name": "vue-material-boilerplate",
   "description": "The official Vue Material boilerplate",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "author": "Marcos Moura <marcosvmmoura@gmail.com>",
   "license": "MIT",
   "private": true,
