@@ -1,6 +1,6 @@
 # vue-material-boilerplate
 
-> The official Vue Material boilerplate
+> The official Vue Material boilerplate (WIP)
 
 ## Progress
 - [X] Webpack 2
