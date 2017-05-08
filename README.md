@@ -1,9 +1,16 @@
-<h2 align="center">Vue Material Boilerplate</h2>
-<p align="center">The official Vue Material boilerplate (WIP)</p>
+<p align="center">
+  <a href="https://vuematerial.github.io/" target="_blank">
+    <img width="150" src="https://vuematerial.github.io/assets/logo-vue-material-green.png">
+  </a>
+</p>
+
+<p align="center">Vue Material Boilerplate</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/STATUS-WIP-orange.svg" alt="Status: WIP">
 </p>
+
+<p align="center">The official Vue Material boilerplate (WIP)</p>
 
 ## Progress
 - [X] Webpack 2
