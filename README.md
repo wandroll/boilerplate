@@ -8,6 +8,10 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/STATUS-WIP-orange.svg" alt="Status: WIP">
+
+  <a href="https://gitter.im/vuematerial">
+    <img src="https://img.shields.io/gitter/room/vuematerial/home.svg" alt="Gitter Chat">
+  </a>
 </p>
 
 ## Progress
