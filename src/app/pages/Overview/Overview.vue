@@ -6,22 +6,30 @@
       </md-layout>
 
       <md-layout md-flex="70" md-flex-small="65" md-flex-xsmall>
-
+        <pinned-repositories />
+        <activity-card />
       </md-layout>
     </md-layout>
   </page-container>
 </template>
 
 <style lang="scss" scoped>
+  .md-card {
+    margin-bottom: 16px;
+  }
 </style>
 
 <script lang="babel">
   import ProfileCard from './ProfileCard'
+  import PinnedRepositories from './PinnedRepositories'
+  import ActivityCard from './ActivityCard'
 
   export default {
     name: 'overview',
     components: {
-      ProfileCard
+      ProfileCard,
+      PinnedRepositories,
+      ActivityCard
     }
   }
 </script>

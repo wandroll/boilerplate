@@ -14,10 +14,11 @@
   .page-container {
     flex: 1;
     overflow: auto;
+    background-color: #f4f5f6;
   }
 
   .page-wrapper {
-    padding: 16px;
+    padding: 16px 16px 0;
   }
 
   .page-wrapper-enter-active {
