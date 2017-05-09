@@ -8,6 +8,12 @@ export default {
   stars: {
     title: 'Stars'
   },
+  followers: {
+    title: 'Followers'
+  },
+  following: {
+    title: 'Following'
+  },
   error: {
     title: 'Error 404'
   }

@@ -20,8 +20,7 @@
     padding: 16px;
   }
 
-  .page-wrapper-enter-active,
-  .page-wrapper-leave-active {
+  .page-wrapper-enter-active {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -33,15 +32,10 @@
     transition-property: transform, opacity;
   }
 
-  .page-wrapper-enter,
-  .page-wrapper-leave-to {
+  .page-wrapper-enter {
     opacity: 0;
     transform: translate3D(-50%, 15%, 0);
-  }
-
-  .page-wrapper-enter-to {
     z-index: 1;
-    opacity: 1;
   }
 </style>
 

@@ -140,6 +140,16 @@
           url: '/stars',
           icon: 'stars',
           label: 'stars.title'
+        },
+        {
+          url: '/followers',
+          icon: 'group',
+          label: 'followers.title'
+        },
+        {
+          url: '/following',
+          icon: 'favorite',
+          label: 'following.title'
         }
       ]
     }),
@@ -153,9 +163,13 @@
         this.$router.push(url)
       }
     },
-    mounted () {
+    async mounted () {
+      await this.$nextTick()
+
       this.$router.afterEach(() => {
-        this.$refs.sideNav.close()
+        if (this.$refs.sideNav) {
+          this.$refs.sideNav.close()
+        }
       })
     }
   }
