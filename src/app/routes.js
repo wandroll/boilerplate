@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 const Overview = r => require.ensure([], () => r(require('./pages/Overview/Overview.vue')), 'overview')
 const Stars = r => require.ensure([], () => r(require('./pages/Stars/Stars.vue')), 'stars')
 const Repositories = r => require.ensure([], () => r(require('./pages/Repositories/Repositories.vue')), 'repositories')
-const ErrorPage = r => require.ensure([], () => r(require('./pages/Error/Error.vue')), 'error')
+const ErrorPage = r => require.ensure([], () => r(require('./pages/Error/Error')), 'error')
 
 Vue.use(VueRouter)
 

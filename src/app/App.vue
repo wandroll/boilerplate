@@ -5,7 +5,7 @@
         <div class="page-wrapper">
           <div class="md-toolbar-container">
             <md-button class="main-menu-trigger md-icon-button" @click.native="toggleSidenav">
-              <md-icon>menu</md-icon>
+              <md-icon md-src="assets/icon-menu.svg"></md-icon>
             </md-button>
 
             <h1 class="md-title md-flex">Vue Material Demo</h1>
@@ -23,7 +23,10 @@
     <md-sidenav class="main-sidenav md-left md-fixed" ref="sideNav">
       <md-list>
         <md-list-item v-for="item in nav" :key="item.url">
-          <router-link exact :to="item.url">{{ $t(item.label) }}</router-link>
+          <router-link exact :to="item.url">
+            <md-icon :md-src="`assets/icon-${item.icon}.svg`" />
+            <span>{{ $t(item.label) }}</span>
+          </router-link>
         </md-list-item>
       </md-list>
     </md-sidenav>
@@ -54,8 +57,8 @@
   }
 
   .page-wrapper {
-    width: 1024px;
-    max-width: 1024px;
+    width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
     display: flex;
     flex-flow: column nowrap;
@@ -80,6 +83,10 @@
       @media (min-width: 767px) {
         display: none;
       }
+
+      .md-icon {
+        top: 0;
+      }
     }
 
     .md-title {
@@ -96,12 +103,18 @@
       }
     }
 
+    .md-tabs {
+      margin-left: 8px;
+    }
+
     .md-tabs-content {
       display: none;
     }
   }
 
   .main-sidenav {
+    z-index: 4;
+
     .router-link-exact-active {
       font-weight: 700;
     }
@@ -115,14 +128,17 @@
       nav: [
         {
           url: '/',
+          icon: 'panorama',
           label: 'overview.title'
         },
         {
           url: '/repositories',
+          icon: 'code',
           label: 'repositories.title'
         },
         {
           url: '/stars',
+          icon: 'stars',
           label: 'stars.title'
         }
       ]

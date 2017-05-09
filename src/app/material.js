@@ -2,6 +2,7 @@ import Vue from 'vue'
 import {
   MdBackdrop,
   MdButton,
+  MdCard,
   MdCore,
   MdIcon,
   MdLayout,
@@ -11,9 +12,10 @@ import {
   MdToolbar,
   MdWhiteframe
 } from 'vue-material'
-import 'vue-material/dist/components/mdCore/index.css'
 import 'vue-material/dist/components/mdBackdrop/index.css'
 import 'vue-material/dist/components/mdButton/index.css'
+import 'vue-material/dist/components/mdCard/index.css'
+import 'vue-material/dist/components/mdCore/index.css'
 import 'vue-material/dist/components/mdIcon/index.css'
 import 'vue-material/dist/components/mdLayout/index.css'
 import 'vue-material/dist/components/mdList/index.css'
@@ -23,8 +25,10 @@ import 'vue-material/dist/components/mdToolbar/index.css'
 import 'vue-material/dist/components/mdWhiteframe/index.css'
 
 Vue.use(MdCore)
+
 Vue.use(MdBackdrop)
 Vue.use(MdButton)
+Vue.use(MdCard)
 Vue.use(MdIcon)
 Vue.use(MdLayout)
 Vue.use(MdList)
@@ -38,7 +42,7 @@ const baseTheme = {
     color: 'grey',
     hue: 900
   },
-  accent: 'red'
+  accent: 'blue'
 }
 
 Vue.material.registerTheme('default', baseTheme)

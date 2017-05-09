@@ -4,6 +4,12 @@
   </page-container>
 </template>
 
-<style lang="scss" scoped src="./Repositories.scss"></style>
+<style lang="scss" scoped>
 
-<script lang="babel" src="./Repositories.js"></script>
+</style>
+
+<script lang="babel">
+  export default {
+    name: 'repositories'
+  }
+</script>

@@ -12,9 +12,12 @@
   @import '~vue-material/src/core/stylesheets/variables.scss';
 
   .page-container {
-    padding: 16px;
     flex: 1;
     overflow: auto;
+  }
+
+  .page-wrapper {
+    padding: 16px;
   }
 
   .page-wrapper-enter-active,

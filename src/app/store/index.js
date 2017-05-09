@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import * as actions from './actions'
 // import * as getters from './getters'
-import home from './modules/home'
+import overview from './modules/overview'
 import error from './modules/error'
 import createLogger from 'vuex/dist/logger'
 
@@ -14,7 +14,7 @@ export default new Vuex.Store({
   actions,
   // getters,
   modules: {
-    home,
+    overview,
     error
   },
   strict: debug,
