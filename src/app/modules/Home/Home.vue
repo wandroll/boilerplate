@@ -1,7 +1,7 @@
 <template>
-  <div class="main-content">
+  <page-container>
     <h1>{{ $t('home.title') }}</h1>
-  </div>
+  </page-container>
 </template>
 
 <style lang="scss" scoped src="./Home.scss"></style>

@@ -8,6 +8,5 @@ export default {
   },
   error: {
     title: 'Error 404'
-  },
-  hello: 'Hello'
+  }
 }

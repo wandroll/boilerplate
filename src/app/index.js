@@ -9,6 +9,7 @@ import router from './routes.js'
 import store from './store'
 import { i18n } from './config.js'
 import './core'
+import './material'
 
 sync(store, router)
 
