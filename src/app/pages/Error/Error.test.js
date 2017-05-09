@@ -1,5 +1,4 @@
 import test from 'ava'
-import Vue from 'vue'
 import { mount } from 'avoriaz'
 import { i18n, currentLang } from 'app/config'
 import ErrorPage from './Error.vue'

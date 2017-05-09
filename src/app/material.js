@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import {
-  MdCore,
   MdBackdrop,
   MdButton,
+  MdCore,
   MdIcon,
   MdLayout,
   MdList,
   MdSidenav,
+  MdTabs,
   MdToolbar,
   MdWhiteframe
 } from 'vue-material'
@@ -17,6 +18,7 @@ import 'vue-material/dist/components/mdIcon/index.css'
 import 'vue-material/dist/components/mdLayout/index.css'
 import 'vue-material/dist/components/mdList/index.css'
 import 'vue-material/dist/components/mdSidenav/index.css'
+import 'vue-material/dist/components/mdTabs/index.css'
 import 'vue-material/dist/components/mdToolbar/index.css'
 import 'vue-material/dist/components/mdWhiteframe/index.css'
 
@@ -27,12 +29,21 @@ Vue.use(MdIcon)
 Vue.use(MdLayout)
 Vue.use(MdList)
 Vue.use(MdSidenav)
+Vue.use(MdTabs)
 Vue.use(MdToolbar)
 Vue.use(MdWhiteframe)
 
-Vue.material.registerTheme('default', {
-  primary: 'blue',
-  accent: 'red',
-  warn: 'red',
-  background: 'white'
+const baseTheme = {
+  primary: {
+    color: 'grey',
+    hue: 900
+  },
+  accent: 'red'
+}
+
+Vue.material.registerTheme('default', baseTheme)
+
+Vue.material.registerTheme('alternative', {
+  ...baseTheme,
+  accent: 'white'
 })

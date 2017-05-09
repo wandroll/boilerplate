@@ -1,21 +1,29 @@
 <template>
   <div id="app" class="container">
-    <md-whiteframe class="main-header" md-tag="md-toolbar">
-      <md-button class="main-menu-trigger md-icon-button" @click.native="toggleSidenav">
-        <md-icon>menu</md-icon>
-      </md-button>
+    <md-whiteframe class="main-header">
+      <md-toolbar class="md-large">
+        <div class="page-wrapper">
+          <div class="md-toolbar-container">
+            <md-button class="main-menu-trigger md-icon-button" @click.native="toggleSidenav">
+              <md-icon>menu</md-icon>
+            </md-button>
 
-      <h1 class="md-title md-flex">Vue Material Starter</h1>
+            <h1 class="md-title md-flex">Vue Material Demo</h1>
+          </div>
+
+          <div class="md-toolbar-container">
+            <md-tabs md-theme="alternative" @change="changeTab">
+              <md-tab v-for="item in nav" :key="item.url" :md-label="$t(item.label)" />
+            </md-tabs>
+          </div>
+        </div>
+      </md-toolbar>
     </md-whiteframe>
 
     <md-sidenav class="main-sidenav md-left md-fixed" ref="sideNav">
       <md-list>
-        <md-list-item>
-          <router-link exact to="/">{{ $t('nav.home') }}</router-link>
-        </md-list-item>
-
-        <md-list-item>
-          <router-link exact to="/about">{{ $t('nav.about') }}</router-link>
+        <md-list-item v-for="item in nav" :key="item.url">
+          <router-link exact :to="item.url">{{ $t(item.label) }}</router-link>
         </md-list-item>
       </md-list>
     </md-sidenav>
@@ -26,8 +34,6 @@
 
 <style lang="scss">
   @import '~vue-material/src/core/stylesheets/variables.scss';
-
-  $sidebar-size: 280px;
 
   html,
   body {
@@ -45,55 +51,59 @@
     flex-flow: column nowrap;
     flex: 1;
     position: relative;
-    transform: translate3d(0, 0, 0);
-    transition: $swift-ease-out;
+  }
 
-    @media (min-width: 1281px) {
-      margin-left: $sidebar-size;
-    }
+  .page-wrapper {
+    width: 1024px;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+    position: relative;
   }
 
   .main-header {
     position: relative;
-    z-index: 2;
-  }
 
-  .main-menu-trigger {
-    @media (min-width: 1281px) {
+    .md-toolbar {
+      height: 128px;
+      overflow: hidden;
+
+      @media (max-width: 767px) {
+        height: 64px;
+        min-height: 64px;
+      }
+    }
+
+    .main-menu-trigger {
+      @media (min-width: 767px) {
+        display: none;
+      }
+    }
+
+    .md-title {
+      @media (min-width: 767px) {
+        padding-left: 8px;
+      }
+    }
+
+    .md-toolbar-container:last-child {
+      align-items: flex-end;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    .md-tabs-content {
       display: none;
     }
   }
 
-  .md-title {
-    @media (min-width: 1281px) {
-      padding-left: 8px;
-    }
-  }
-
-  .main-sidenav.md-left {
-    z-index: 3;
-
-    .md-sidenav-content {
-      width: $sidebar-size;
-      display: flex;
-      flex-flow: column;
-      overflow: hidden;
-      transition: $swift-ease-out;
-
-      @media (min-width: 1281px) {
-        top: 0;
-        left: -$sidebar-size;
-        pointer-events: auto;
-        box-shadow: $material-shadow-2dp;
-        transform: translate3d(0, 0, 0);
-      }
-    }
-
-    .md-backdrop {
-      @media (min-width: 1281px) {
-        opacity: 0;
-        pointer-events: none;
-      }
+  .main-sidenav {
+    .router-link-exact-active {
+      font-weight: 700;
     }
   }
 </style>
@@ -101,15 +111,35 @@
 <script lang="babel">
   export default {
     name: 'app',
+    data: () => ({
+      nav: [
+        {
+          url: '/',
+          label: 'overview.title'
+        },
+        {
+          url: '/repositories',
+          label: 'repositories.title'
+        },
+        {
+          url: '/stars',
+          label: 'stars.title'
+        }
+      ]
+    }),
     methods: {
       toggleSidenav () {
         this.$refs.sideNav.open()
+      },
+      changeTab (item) {
+        const { url } = this.nav[item]
+
+        this.$router.push(url)
       }
     },
     mounted () {
-      this.$router.beforeEach((from, to, next) => {
+      this.$router.afterEach(() => {
         this.$refs.sideNav.close()
-        next()
       })
     }
   }

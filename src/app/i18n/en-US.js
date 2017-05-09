@@ -1,10 +1,12 @@
 export default {
-  nav: {
-    home: 'Home',
-    about: 'About'
+  overview: {
+    title: 'Overview'
   },
-  home: {
-    title: 'Home'
+  repositories: {
+    title: 'Repositories'
+  },
+  stars: {
+    title: 'Stars'
   },
   error: {
     title: 'Error 404'

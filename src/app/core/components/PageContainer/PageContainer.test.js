@@ -1,5 +1,4 @@
 import test from 'ava'
-import Vue from 'vue'
 import { mount } from 'avoriaz'
 import PageContainer from './PageContainer.vue'
 

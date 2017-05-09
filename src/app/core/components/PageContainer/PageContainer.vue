@@ -1,9 +1,11 @@
 <template>
-  <transition name="page-container" appear>
-    <div class="page-container">
-      <slot />
-    </div>
-  </transition>
+  <div class="page-container">
+    <transition name="page-wrapper" appear>
+      <div class="page-wrapper">
+        <slot />
+      </div>
+    </transition>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -13,33 +15,30 @@
     padding: 16px;
     flex: 1;
     overflow: auto;
-    background-color: #fff;
-    transition: $swift-ease-out;
-    transition-duration: .4s;
   }
 
-  .page-container-enter-active,
-  .page-container-leave-active {
+  .page-wrapper-enter-active,
+  .page-wrapper-leave-active {
     width: 100%;
+    height: 100%;
     position: absolute;
-    top: 64px;
-    bottom: 0;
-    z-index: 0;
+    left: 50%;
     overflow: hidden;
-    transform: translate3D(0, 0, 0);
-  }
-
-  .page-container-enter,
-  .page-container-leave-to {
-    opacity: 0;
-    transform: translate3D(0, 15%, 0);
+    z-index: 0;
+    transform: translate3D(-50%, 0, 0);
     transition: $swift-ease-out;
+    transition-property: transform, opacity;
   }
 
-  .page-container-enter-to {
+  .page-wrapper-enter,
+  .page-wrapper-leave-to {
+    opacity: 0;
+    transform: translate3D(-50%, 15%, 0);
+  }
+
+  .page-wrapper-enter-to {
     z-index: 1;
     opacity: 1;
-    transition: $material-enter;
   }
 </style>
 
