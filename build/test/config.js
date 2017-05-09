@@ -1,6 +1,6 @@
-const vueLoaderConfig = require('../webpack/vue-loader-config')
+import vueLoaderConfig from '../webpack/vue-loader-config'
 
-module.exports = {
+export default {
   module: {
     rules: [
       {
