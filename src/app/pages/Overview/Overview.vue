@@ -17,6 +17,10 @@
   .md-card {
     margin-bottom: 16px;
   }
+
+  .md-layout {
+    align-items: flex-start;
+  }
 </style>
 
 <script lang="babel">

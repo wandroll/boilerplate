@@ -1,5 +1,5 @@
 <template>
-  <md-card class="pinned-repositories md-flex">
+  <md-card class="pinned-repositories md-flex-100">
     <md-card-header>
       <h2 class="md-title">Pinned Repositories</h2>
     </md-card-header>

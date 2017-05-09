@@ -1,5 +1,5 @@
 <template>
-  <md-card class="activity-card md-flex">
+  <md-card class="activity-card md-flex-100">
     <md-card-header>
       <h2 class="md-title">Activity</h2>
     </md-card-header>
