@@ -1,8 +1,10 @@
 <template>
   <div class="page-container">
+    <transition name="page-wrapper" appear>
       <div class="page-wrapper">
         <slot />
       </div>
+    </transition>
   </div>
 </template>
 
