@@ -9,6 +9,13 @@
             </md-button>
 
             <h1 class="md-title md-flex">Vue Material Demo</h1>
+
+            <nav class="main-navigation">
+              <md-button class="md-dense">Pull requests</md-button>
+              <md-button class="md-dense">Issues</md-button>
+              <md-button class="md-dense">Trending</md-button>
+              <md-button class="md-dense">Gist</md-button>
+            </nav>
           </div>
 
           <div class="md-toolbar-container">
@@ -79,6 +86,14 @@
       }
     }
 
+    .md-toolbar-container:last-child {
+      align-items: flex-end;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
     .main-menu-trigger {
       @media (min-width: 767px) {
         display: none;
@@ -95,11 +110,12 @@
       }
     }
 
-    .md-toolbar-container:last-child {
-      align-items: flex-end;
-
-      @media (max-width: 767px) {
-        display: none;
+    .main-navigation {
+      .md-button {
+        min-width: 0;
+        margin: 1px;
+        padding-right: 12px;
+        padding-left: 12px;
       }
     }
 
