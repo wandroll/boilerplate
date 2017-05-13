@@ -5,10 +5,12 @@
         <div class="page-wrapper">
           <div class="md-toolbar-container">
             <md-button class="main-menu-trigger md-icon-button" @click.native="toggleSidenav">
-              <md-icon md-src="assets/icon-menu.svg"></md-icon>
+              <md-icon md-src="assets/icon-menu.svg" />
             </md-button>
 
-            <h1 class="md-title md-flex">Vue Material Demo</h1>
+            <md-icon md-src="assets/icon-github.svg" />
+
+            <h1 class="md-title md-flex">Vue Material</h1>
 
             <nav class="main-navigation">
               <md-button class="md-dense">Pull requests</md-button>
@@ -39,6 +41,21 @@
     </md-sidenav>
 
     <router-view />
+
+    <md-speed-dial md-open="hover" class="md-fab-bottom-right">
+      <md-button class="md-fab" md-fab-trigger>
+        <md-icon md-icon-morph md-src="assets/icon-code.svg" />
+        <md-icon md-src="assets/icon-add.svg" />
+      </md-button>
+
+      <md-button class="md-fab md-primary md-mini md-clean">
+        <md-icon md-src="assets/icon-note.svg" />
+      </md-button>
+
+      <md-button class="md-fab md-primary md-mini md-clean">
+        <md-icon md-src="assets/icon-work.svg" />
+      </md-button>
+    </md-speed-dial>
   </div>
 </template>
 
@@ -111,6 +128,10 @@
     }
 
     .main-navigation {
+      @media (max-width: 767px) {
+        display: none;
+      }
+
       .md-button {
         min-width: 0;
         margin: 1px;
@@ -134,6 +155,10 @@
     .router-link-exact-active {
       font-weight: 700;
     }
+  }
+
+  .md-button.md-fab .md-icon {
+    display: flex;
   }
 </style>
 

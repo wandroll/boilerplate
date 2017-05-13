@@ -1,7 +1,7 @@
 <template>
   <md-list-item v-if="event.type === 'push'">
     <md-avatar class="md-avatar-icon md-accent">
-      <md-icon md-src="assets/icon-cloud-up.svg"></md-icon>
+      <md-icon md-src="assets/icon-cloud-up.svg" />
     </md-avatar>
 
     <div class="md-list-text-container">
@@ -12,7 +12,7 @@
 
   <md-list-item v-else-if="event.type === 'pull'">
     <md-avatar class="md-avatar-icon md-accent">
-      <md-icon md-src="assets/icon-eye.svg"></md-icon>
+      <md-icon md-src="assets/icon-eye.svg" />
     </md-avatar>
 
     <div class="md-list-text-container">
@@ -23,7 +23,7 @@
 
   <md-list-item v-else-if="event.type === 'repo'">
     <md-avatar class="md-avatar-icon md-accent">
-      <md-icon md-src="assets/icon-new.svg"></md-icon>
+      <md-icon md-src="assets/icon-new.svg" />
     </md-avatar>
 
     <div class="md-list-text-container">

@@ -9,7 +9,7 @@
         <md-menu md-size="2" md-direction="bottom left">
           <md-button class="md-dense md-accent" md-menu-trigger>
             <span>{{ currentFilter }}</span>
-            <md-icon md-src="assets/icon-arrow-dropdown.svg"></md-icon>
+            <md-icon md-src="assets/icon-arrow-dropdown.svg" />
           </md-button>
 
           <md-menu-content>
@@ -20,7 +20,7 @@
     </md-card-area>
 
     <md-list class="md-double-line" v-for="month in timeline" :key="month.name">
-      <md-subheader>{{ month.name }}</md-subheader>
+      <md-subheader>{{ month.name }} {{ currentFilter }}</md-subheader>
       <activity-card-item v-for="event in month.events" :key="event.name" :event="event" />
     </md-list>
   </md-card>

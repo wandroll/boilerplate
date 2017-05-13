@@ -11,6 +11,7 @@ import {
   MdMenu,
   MdSelect,
   MdSidenav,
+  MdSpeedDial,
   MdSubheader,
   MdTabs,
   MdToolbar,
@@ -27,6 +28,7 @@ import 'vue-material/dist/components/mdList/index.css'
 import 'vue-material/dist/components/mdMenu/index.css'
 import 'vue-material/dist/components/mdSelect/index.css'
 import 'vue-material/dist/components/mdSidenav/index.css'
+import 'vue-material/dist/components/mdSpeedDial/index.css'
 import 'vue-material/dist/components/mdSubheader/index.css'
 import 'vue-material/dist/components/mdTabs/index.css'
 import 'vue-material/dist/components/mdToolbar/index.css'
@@ -44,6 +46,7 @@ Vue.use(MdList)
 Vue.use(MdMenu)
 Vue.use(MdSelect)
 Vue.use(MdSidenav)
+Vue.use(MdSpeedDial)
 Vue.use(MdSubheader)
 Vue.use(MdTabs)
 Vue.use(MdToolbar)

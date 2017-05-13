@@ -14,7 +14,7 @@
         </div>
 
         <div class="md-list-action" v-if="repo.stars">
-          {{ repo.stars }} <md-icon md-src="assets/icon-stars.svg"></md-icon>
+          {{ repo.stars }} <md-icon md-src="assets/icon-stars.svg" />
         </div>
       </md-list-item>
     </md-list>
