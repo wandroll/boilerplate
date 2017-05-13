@@ -2,7 +2,7 @@
   <md-card class="pinned-repositories md-flex-100">
     <md-card-area>
       <md-card-header>
-        <h2 class="md-title">Pinned Repositories</h2>
+        <h2 class="md-title">{{ $t('overview.pinned.title') }}</h2>
       </md-card-header>
     </md-card-area>
 
