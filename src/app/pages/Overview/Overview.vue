@@ -1,11 +1,11 @@
 <template>
   <page-container>
     <md-layout :md-gutter="true" md-column-xsmall>
-      <md-layout md-flex="30" md-flex-small="35" md-flex-xsmall>
+      <md-layout md-flex="30" md-flex-small="35" md-flex-xsmall="100">
         <profile-card />
       </md-layout>
 
-      <md-layout md-flex="70" md-flex-small="65" md-flex-xsmall>
+      <md-layout md-flex="70" md-flex-small="65" md-flex-xsmall="100">
         <pinned-repositories />
         <activity-card />
       </md-layout>
