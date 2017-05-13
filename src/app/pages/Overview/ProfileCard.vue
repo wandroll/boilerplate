@@ -22,6 +22,11 @@
       <a href="https://vuematerial.github.io/" target="_blank" rel="noopener">https://vuematerial.github.io/</a>
     </md-card-header>
 
+    <md-card-header class="profile-card-icon">
+      <md-icon md-src="assets/icon-location.svg" />
+      <span>Brazil</span>
+    </md-card-header>
+
     <md-card-content>
       Front End Engineer from Brazil with a focus on usability, performance and with a great experience with Material Design.
     </md-card-content>
@@ -112,6 +117,8 @@
   }
 
   .profile-card-icon {
+    color: rgba(#000, .7);
+
     .md-icon {
       $size: 21px;
 
