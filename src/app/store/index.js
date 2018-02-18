@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import * as actions from './actions'
+import actions from './actions'
 // import * as getters from './getters'
 import overview from './modules/overview'
 import error from './modules/error'

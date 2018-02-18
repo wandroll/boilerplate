@@ -1,5 +1,8 @@
 import * as types from './mutations'
 
-export const myAction = ({ commit }) => {
-  commit(types.MUTATION_NAME)
+const actions = {
+  myAction: ({ commit }) => {
+    commit(types.MUTATION_NAME)
+  }
 }
+export default actions
